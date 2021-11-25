@@ -6,13 +6,21 @@
 
 
 <body <?php body_class(); ?>>
-<div class="header ">
-    <h1>Welcome to <br/>
-        <?php bloginfo('name'); ?>
-    </h1>
+<div class="navigator">
+    <?php wp_nav_menu(
+        array(
+            'theme_location' => 'top-menu',
+            'menu_class' => 'navigator'
+        )
+    ); ?>
+
 </div>
 
-<div class="main ">
-    <h2>This is the body!</h2>
+<div class="header ">
+    <h2>Welcome to <br/>
+        <?php bloginfo('name'); ?>
+    </h2>
 </div>
+
+
 </body>
