@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<div class="container">
+    <?php get_header(); ?>
 
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
+</div>

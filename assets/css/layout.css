@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    background-color: #0a4b78;
+    text-align: center;
+}
+
+.header h1 {
+    color: whitesmoke;
+}
+
+.main {
+    background-color: whitesmoke;
+    height: auto;
+}
+
+.footer {
+    background-color: #0c88b4;
+}
