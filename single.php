@@ -1,6 +1,7 @@
-<div class="container">
-
-    <?php get_header(); ?>
+<?php
+$categories = get_the_category();
+?>
+<?php get_header(); ?>
 
     <div class="main ">
 
@@ -15,13 +16,25 @@
 
                 <?php the_content(); ?>
 
+
+                <br>
+                <p class="category-container">Categories</p>
+                <?php
+                foreach ($categories as $category) {
+                    echo $category->name . ', ';
+
+                }
+                ?>
+                <? php ?>
             <?php endwhile;
         else :
-            _e('Sorry, no posts matched your criteria.', 'textdomain');
+            _e('Sorry, no posts matched your criteria . ', 'textdomain');
         endif; ?>
+        <hr>
+        <p>Nieuwste blog's</p>
+        <br>
+        <?php wp_get_archives('title_li=&type=postbypost&limit=3'); ?>
 
     </div>
 
-    <?php get_footer(); ?>
-
-</div>
+<?php get_footer(); ?>

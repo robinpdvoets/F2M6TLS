@@ -1,12 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html <?php language_attributes(); ?> >
 <head>
+    <meta charset="<?php bloginfo('charset'); ?>"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <?php wp_head(); ?>
 </head>
 
 
 <body <?php body_class(); ?>>
-<div class="navigator">
+<div class="navigator ">
     <?php wp_nav_menu(
         array(
             'theme_location' => 'top-menu',
@@ -23,4 +25,6 @@
 </div>
 
 
-</body>
+<div class="container">
+
+
