@@ -1,0 +1,18 @@
+@mixin button-bg($bg, $c) {
+  background: $bg;
+  color: $c;
+  &:hover {
+    background: darken($bg, 30%);
+    transition: all .3s ease-in;
+  }
+
+  &:active {
+    background: darken($bg, 60%);
+  }
+}
+
+@mixin bg-overflow($color) {
+  background-color: $color;
+  z-index: 1;
+  opacity: .1;
+}

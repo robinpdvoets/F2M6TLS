@@ -1,0 +1,18 @@
+.btn-style {
+  @include button-bg($side-color-4, $bg-color);
+
+}
+
+.navigator {
+  ul {
+    li {
+      a {
+        @include button-bg($side-color-4, $bg-color);
+      }
+    }
+  }
+}
+
+.button:hover {
+  background-color: $bg-color;
+}

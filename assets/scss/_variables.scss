@@ -1,0 +1,35 @@
+//$font-type: font-family: 'Roboto', sans-serif;
+
+// Theme colors
+$main-color: #82ECFF;
+$s-main-color: #E24425;
+$bg-color: #ffffff;
+$s-bg-color: #000000;
+
+// Secondary colors
+$side-color: #80D362;
+$side-color-2: #ffff5e;
+$side-color-3: #f264eb;
+$side-color-4: #1b06ea;
+
+
+// Link colors
+$link-color: #ffffff;
+
+// Hover effects
+$main-color-hover: darken($main-color, 40%);
+$s-main-color-hover: darken($s-main-color, 40%);
+
+// Font sizes
+$font-size-h2: 112px;
+$font-size-h3: 38px;
+$font-size-h4: 37px;
+
+$phone-font-size-h2: 72px; //Font style
+$font-style: 'Roboto', sans-serif;
+
+//Full width & height
+$full-width: 100vh;
+$full-height: 100vh
+
+

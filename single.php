@@ -35,6 +35,7 @@ $categories = get_the_category();
         <br>
         <?php wp_get_archives('title_li=&type=postbypost&limit=3'); ?>
 
+
     </div>
 
 <?php get_footer(); ?>

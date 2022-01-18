@@ -18,11 +18,18 @@
 
 </div>
 
-<div class="header ">
-    <h2>Welcome to <br/>
+<header class="header"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(<?php echo get_header_image(); ?> );">
+
+    <?php get_custom_header(); ?>
+    <?php if (has_custom_logo()) ;
+    echo get_custom_logo();
+    ?>
+    <h1>
         <?php bloginfo('name'); ?>
-    </h2>
-</div>
+    </h1>
+
+</header>
 
 
 <div class="container">
