@@ -1,0 +1,46 @@
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "navigation";
+@import "buttons";
+@import "header";
+@import "archive";
+
+* {
+  margin: 0;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+.main {
+  background-color: $bg-color;
+  height: auto;
+  padding: 9px;
+}
+
+.footer {
+  background-color: $bg-color;
+}
+
+.category-container {
+  font-weight: bold;
+}
+
+
+.wp-block-image img {
+  height: 300px;
+  width: auto;
+}
+
+
+// Telefoon versie
+@media only screen and (max-width: 600px) {
+  .img-small {
+    width: 200px;
+    height: auto;
+  }
+}
