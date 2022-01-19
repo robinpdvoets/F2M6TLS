@@ -33,5 +33,6 @@
 
 
 <div class="container">
+    <?php wp_footer(); ?>
 
 

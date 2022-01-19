@@ -3,8 +3,6 @@ $categories = get_the_category();
 ?>
 
 
-<?php get_header(); ?>
-
 <div class="main ">
     <h1><?php single_cat_title(); ?></h1>
     <hr>
