@@ -3,16 +3,14 @@ $categories = get_the_category();
 ?>
 
 
-<?php get_header(); ?>
-
 <div class="main ">
     <h1><?php single_cat_title(); ?></h1>
     <hr>
     <?php if (have_posts()) :
         while (have_posts()) :
             the_post(); ?>
-            <article
-                <?php if (has_post_thumbnail()): ?>style="background-size: 150vh auto;background-repeat: no-repeat;background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(<?php the_post_thumbnail_url('smallest'); ?>"<?php endif;
+            <article class="pieces"
+                     <?php if (has_post_thumbnail()): ?>style="background-size: 250vh auto;background-repeat: no-repeat;background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(<?php the_post_thumbnail_url('smallest'); ?>"<?php endif;
             ?>>
 
 
