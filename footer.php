@@ -1,6 +1,4 @@
-<div class="footer">
-    <p>This is the footer!</p>
-</div>
+<footer> <?php get_sidebar('footer'); ?></footer>
 </div>
 <?php wp_footer(); ?>
 </body>

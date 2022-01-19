@@ -11,6 +11,7 @@ function load_stylesheets()
     wp_enqueue_script('jquery');
 }
 
+
 add_action('wp_enqueue_scripts', 'load_stylesheets');
 
 /**
@@ -54,6 +55,24 @@ register_nav_menus(
 
     )
 );
+
+add_action('widgets_init', 'my_register_sidebars');
+function my_register_sidebars()
+{
+    /* Register the 'primary' sidebar. */
+    register_sidebar(
+        array(
+            'id' => 'footer',
+            'name' => __('Footer'),
+            'description' => __('Footer sidebar'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        )
+    );
+    /* Repeat register_sidebar() code for additional sidebars. */
+}
 
 
 
