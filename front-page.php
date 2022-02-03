@@ -1,19 +1,15 @@
 <?php get_header(); ?>
 
+<header class="header"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(<?php echo get_header_image(); ?> );">
 
-<div class="main ">
-    <h1><?php the_title(); ?></h1>
-    <?php if (have_posts()) :
-        while (have_posts()) : the_post(); ?>
+    <?php get_custom_header(); ?>
+    <?php if (has_custom_logo()) ;
+    echo get_custom_logo();
+    ?>
 
-            <?php the_content(); ?>
+    <button><a href="<?php the_permalink(); ?>/winkel/">Bekijk hier alle pakketten</a></button>
+</header>
 
-        <?php endwhile;
-    else :
-        _e('Sorry, no posts matched your criteria.', 'textdomain');
-    endif; ?>
-</div>
 
-<?php wp_get_archives('title_li=&type=postbypost&limit=3'); ?>
-<?php get_footer(); ?>
 

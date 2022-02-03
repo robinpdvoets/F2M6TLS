@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 
+
 .header {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -8,6 +9,9 @@
   width: 100%;
   height: $full-height;
   text-align: center;
+  display: grid;
+
+  grid-template-row: 1fr 1fr;
 
   h1 {
     color: $main-color;
@@ -17,6 +21,21 @@
   .custom-logo {
     max-width: 40vh;
     height: auto;
+    margin-top: 50vh;
+    top: 0;
+  }
+
+  button {
+    width: 25vh;
+    height: 10vh;
+    border-radius: 20px;
+    background-color: $main-color;
+
+    margin: 0 auto;
+
+    a {
+      color: $s-bg-color;
+    }
   }
 
 }

@@ -1,0 +1,25 @@
+@import "variables";
+
+.product-template-default {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+description_tab {
+  active {
+    color: black;
+  }
+}
+
+.woocommerce-Reviews-title {
+  font-size: 52px;
+}
+
+.pagenav {
+  display: none;
+}
+
+.categories {
+  display: none;
+}
+

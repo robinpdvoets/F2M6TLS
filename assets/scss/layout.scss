@@ -5,10 +5,14 @@
 @import "buttons";
 @import "header";
 @import "archive";
+@import "footer";
+@import "leyerscape";
 
-* {
-  margin: 0;
+body {
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
 
 .container {
   width: 75%;
@@ -43,4 +47,9 @@
     width: 200px;
     height: auto;
   }
+}
+
+
+* {
+  color: white;
 }

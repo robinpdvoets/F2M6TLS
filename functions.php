@@ -1,18 +1,15 @@
 <?php
 
 
-function load_stylesheets()
+function load_stylesheet()
 {
 
-    wp_register_style('stylesheet', get_template_directory_uri() . '/assets/css/layout.css',
+    wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/css/layout.css',
         array(), false, 'all');
-    wp_enqueue_style('stylesheet');
-
-    wp_enqueue_script('jquery');
 }
 
 
-add_action('wp_enqueue_scripts', 'load_stylesheets');
+add_action('wp_enqueue_scripts', 'load_stylesheet');
 
 /**
  * Enable support for post thumbnails and featured images.
@@ -24,13 +21,15 @@ add_image_size('smallest', 300, 300, true);
 add_theme_support('automatic-feed-links');
 add_theme_support('menus');
 
+add_theme_support('woocommerce');
+
 //custom header
 function custom_header_setup()
 {
     $args = array(
         'default-image' => get_template_directory_uri() . '/img/Lake.jpeg',
         'width' => 1000,
-        'height' => 250,
+        'height' => 450,
         'flex-width' => true,
         'flex-height' => true,
     );
@@ -71,8 +70,21 @@ function my_register_sidebars()
             'after_title' => '</h3>',
         )
     );
+    register_sidebar(
+        array(
+            'id' => 'infoleyerscape',
+            'name' => __('Info-layerscape'),
+            'description' => __('Info leyerscape'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="leyerscape">',
+            'after_title' => '</h3>',
+        )
+    );
     /* Repeat register_sidebar() code for additional sidebars. */
 }
+
+
 
 
 
